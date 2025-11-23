@@ -20,6 +20,14 @@ int ptr_char(char c)
 int ptr_str(char *s)
 {
 	int i = 0;
+	char *nilcase = "(null)";
+
+	if (s == NULL) {
+		for (i = 0; i < 6; i++)
+			ptr_char(nilcase[i]);
+
+		return (6);
+	}
 
 	while (s[i] != '\0')
 	{
