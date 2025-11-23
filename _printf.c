@@ -35,15 +35,16 @@ int _printf(const char *formt, ...)
 				len += ptr_char('%');
 				i++;
 				break;
+			default:
+				len += ptr_char('%');
+				break;
 			}
 		}
 		else
 		{
 			ptr_char(formt[i]);
 			len++;
-		}
-
-		i++;
+		} i++;
 	}
 
 	va_end(args);
